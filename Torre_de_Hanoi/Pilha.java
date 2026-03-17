@@ -1,43 +1,43 @@
 /*Representa a torre usada no jogo.
 É uma pilha.*/
 
-public class Torre {
+public class Pilha <T> {
     // atributos
     private static final int TAM_DEFAULT = 100;
-    private int topoTorre;
-    private int elementos[];
+    private int topoPilha;
+    private T elementos[];
     // construtores
-    public Torre(int tamanho) {
-        this.elementos = new int[tamanho];
-        this.topoTorre = -1;
+    public Pilha(int tamanho) {
+        this.elementos = (T[]) new Object[tamanho];
+        this.topoPilha = -1;
     }
 
-    public Torre() {
+    public Pilha() {
         this(TAM_DEFAULT);
     }
     // métodos
     public boolean isEmpty() {
-        return this.topoTorre == -1;
+        return this.topoPilha == -1;
     }
 
     public boolean isFull() {
-        return topoTorre == elementos.length - 1;
+        return topoPilha == elementos.length - 1;
     }
 
-    public void push(int e) throws Exception {
+    public void push(T e) throws Exception {
         if (!this.isFull()) {
-            topoTorre++;
-            this.elementos[topoTorre] = e;
+            topoPilha++;
+            this.elementos[topoPilha] = e;
         }
         else {
             throw new Exception("Overflow - Estouro de pilha.");
         }
     }
 
-    public int pop() throws Exception {
+    public T pop() throws Exception {
         if (!this.isEmpty()) {
-            int temp = this.elementos[topoTorre];
-            topoTorre--;
+            T temp = this.elementos[topoPilha];
+            topoPilha--;
             return temp;
         }
         else {
@@ -45,9 +45,9 @@ public class Torre {
         }
     }
 
-    public int topo() throws Exception {
+    public T topo() throws Exception {
         if (!this.isEmpty()) {
-            return this.elementos[topoTorre];
+            return this.elementos[topoPilha];
         }
         else {
             throw new Exception("Underflow - Esvaziamento de Pilha.");
@@ -55,7 +55,7 @@ public class Torre {
     }
     
     public int sizeElements() {
-        return topoTorre + 1;
+        return topoPilha + 1;
     }
 
 
