@@ -7,6 +7,7 @@ public class Pilha <T> {
     private int topoPilha;
     private T elementos[];
     // construtores
+    @SuppressWarnings("unchecked")
     public Pilha(int tamanho) {
         this.elementos = (T[]) new Object[tamanho];
         this.topoPilha = -1;
@@ -57,8 +58,15 @@ public class Pilha <T> {
     public int sizeElements() {
         return topoPilha + 1;
     }
-
-
+    //teste
+    public T percorrer(int i) throws Exception {
+        if (!this.isEmpty()) {
+            return this.elementos[topoPilha-i];
+        }
+        else {
+            throw new Exception("Underflow - Esvaziamento de Pilha.");
+        }
+    }
 
 
     

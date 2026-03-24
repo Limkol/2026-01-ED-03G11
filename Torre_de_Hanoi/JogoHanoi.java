@@ -35,7 +35,7 @@ public class JogoHanoi {
 
         //Printando o menu para o usuario e recebendo a entrada dele
         System.out.printf("%s", menu);
-        System.out.print("Escolha uma opção:");
+        System.out.print("Escolha uma opção: ");
         int num = entrada.nextInt();
 
         //Compara se a entrada numerica do usuario é valida
@@ -54,16 +54,21 @@ public class JogoHanoi {
     }
 
     public static void mover() {
-        Scanner entrada_1 = new Scanner(System.in);
-        Scanner entrada_2 = new Scanner(System.in);
-        System.out.print("De qual torre você vai mover");
-        int torred = entrada_1.nextInt();
-        System.out.print("Para qual torre você quer mover");
-        int torrep = entrada_2.nextInt();
+        //Crianção dos scanner para receber as entradas do usuario
+        Scanner entrada = new Scanner(System.in);
+        //Recebe a entrada da torre de origem
+        System.out.print("De qual torre você vai mover: ");
+        int torred = entrada.nextInt();
+        //Recebe a entrada da torre de origem
+        System.out.print("Para qual torre você quer mover: ");
+        int torrep = entrada.nextInt();
+        //Falta verificar entrada valida, executar a movimentação e detectar se o problema foi resolvido
+        System.out.printf("Teste %d e %d", torred, torrep);
     }
 
     public static void mostrar() {
-
+        System.out.printf("%d", t1.topo());
+        System.out.printf("TORRE_1 TORRE_2 TORRE_3\n");
     }
 
     public static void main() throws Exception {
