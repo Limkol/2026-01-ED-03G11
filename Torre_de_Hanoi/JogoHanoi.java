@@ -59,7 +59,7 @@ public class JogoHanoi {
         //Recebe a entrada da torre de origem
         System.out.print("De qual torre você vai mover: ");
         int torred = entrada.nextInt();
-        //Recebe a entrada da torre de origem
+        //Recebe a entrada da torre de destino
         System.out.print("Para qual torre você quer mover: ");
         int torrep = entrada.nextInt();
         //Falta verificar entrada valida, executar a movimentação e detectar se o problema foi resolvido

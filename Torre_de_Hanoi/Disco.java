@@ -15,6 +15,6 @@ public class Disco {
     }
 
     public String getImagem () {
-        return letra.repeat(tamanho);
+        return letra.repeat(tamanho) + " ".repeat(8-tamanho);
     }
 }

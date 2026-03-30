@@ -54,18 +54,17 @@ public class Pilha <T> {
             throw new Exception("Underflow - Esvaziamento de Pilha.");
         }
     }
-    
-    public int sizeElements() {
+    //Por enquanto util, sendo usado
+    public int quantidade() { //Método para retornar a quantidade de elementos na pilha
         return topoPilha + 1;
     }
-    //teste
+    //Por enquanto util, sendo usado
+    public int tamanho() { //Método para retornar o tamanho da pilha
+        return elementos.length;
+    }
+    //teste sendo usado
     public T percorrer(int i) throws Exception {
-        if (!this.isEmpty()) {
-            return this.elementos[topoPilha-i];
-        }
-        else {
-            throw new Exception("Underflow - Esvaziamento de Pilha.");
-        }
+        return elementos[tamanho()-1-i];
     }
 
 
