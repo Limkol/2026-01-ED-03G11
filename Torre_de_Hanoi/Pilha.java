@@ -17,10 +17,11 @@ public class Pilha <T> {
         this(TAM_DEFAULT);
     }
     // métodos
+    //Por enquanto util, sendo usado
     public boolean isEmpty() {
         return this.topoPilha == -1;
     }
-
+    //Por enquanto util, sendo usado
     public boolean isFull() {
         return topoPilha == elementos.length - 1;
     }
@@ -45,7 +46,7 @@ public class Pilha <T> {
             throw new Exception("Underflow - Esvaziamento de Pilha.");
         }
     }
-
+    //Por enquanto util, sendo usado
     public T topo() throws Exception {
         if (!this.isEmpty()) {
             return this.elementos[topoPilha];
