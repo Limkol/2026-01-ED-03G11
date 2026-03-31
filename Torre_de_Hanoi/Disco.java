@@ -5,6 +5,7 @@ public class Disco {
     //Atributos
     int tamanho;
     String letra = "*";
+    
     //Contrutores
     public Disco (int valor) {
         tamanho = valor;
@@ -15,6 +16,6 @@ public class Disco {
     }
 
     public String getImagem () {
-        return letra.repeat(tamanho) + " ".repeat(8-tamanho);
+        return letra.repeat(tamanho) + " ".repeat(8 - tamanho);
     }
 }

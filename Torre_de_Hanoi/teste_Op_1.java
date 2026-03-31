@@ -3,30 +3,28 @@ import java.util.Scanner;
 public class teste_Op_1 {
 
         //Scanner de entrada do usuario
-        private static Scanner entrada = new Scanner(System.in);
+        public static Scanner entrada = new Scanner(System.in);
 
     public static void main(String[] args) throws Exception {
         
-        Pilha<Disco> t1 = new Pilha<Disco>(5);
-        Pilha<Disco> t2 = new Pilha<Disco>(5);
-        Pilha<Disco> t3 = new Pilha<Disco>(5);
+        System.out.print("Escolha o numero de discos:");
+        int num_Discos = entrada.nextInt();
 
-        Disco d1 = new Disco(1);
-        Disco d2 = new Disco(2);
-        Disco d3 = new Disco(3);
-        Disco d4 = new Disco(4);
-        Disco d5 = new Disco(5);
-    
-        t1.push(d5);
-        t1.push(d4);
-        t1.push(d3);
-        t1.push(d2);
-        t1.push(d1);
-        
-        movimento();
-    }
+        Pilha<Pilha> p = new Pilha<Pilha>(3);
 
-    public static void movimento(){
+        Pilha<Disco> t1 = new Pilha<Disco>(num_Discos);
+        Pilha<Disco> t2 = new Pilha<Disco>(num_Discos);
+        Pilha<Disco> t3 = new Pilha<Disco>(num_Discos);
+
+        p.push(t1);
+        p.push(t2);
+        p.push(t3);
+
+        for (int i = num_Discos; i > 0; i--) {
+            Disco d = new Disco(i);
+            t1.push(d);
+        }
+
         int torred = 0;
         int torrep = 0;
 
@@ -52,7 +50,13 @@ public class teste_Op_1 {
             System.out.printf("Torre invalida, escolha novemente\n");
         }
 
-        //Falta verificar entrada valida, executar a movimentação e detectar se o problema foi resolvido
+        if (p.percorrer(torred - 1).topo().getTamanho())
+
+        if (t3.isFull()) {
+            System.out.printf("Parabéns, você resolveu o problema!\n");
+        }
+
+        //Falta executar a movimentação e veficar se ela é valida
         /*
         //Testes
         System.out.printf("Teste %d e %d", torred, torrep);
