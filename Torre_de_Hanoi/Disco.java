@@ -10,6 +10,7 @@ public class Disco {
     public Disco (int valor) {
         tamanho = valor;
     }
+    
     //Metodos
     public int getTamanho() {
         return tamanho;
