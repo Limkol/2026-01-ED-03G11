@@ -6,6 +6,7 @@ public class Pilha <T> {
     private static final int TAM_DEFAULT = 100;
     private int topoPilha;
     private T elementos[];
+
     // construtores
     @SuppressWarnings("unchecked")
     public Pilha(int tamanho) {
@@ -17,16 +18,15 @@ public class Pilha <T> {
         this(TAM_DEFAULT);
     }
     // métodos
-    //Por enquanto util, sendo usado
-    public boolean isEmpty() {
+    public boolean isEmpty() { // Retorna true se a pilha estiver vazia.
         return this.topoPilha == -1;
     }
-    //Por enquanto util, sendo usado
-    public boolean isFull() {
+
+    public boolean isFull() { // retorna true se a pilha estiver cheia.
         return topoPilha == elementos.length - 1;
     }
 
-    public void push(T e) throws Exception {
+    public void push(T e) throws Exception { //Coloca um elemento no topo da pilha.
         if (!this.isFull()) {
             topoPilha++;
             this.elementos[topoPilha] = e;
@@ -36,7 +36,7 @@ public class Pilha <T> {
         }
     }
 
-    public T pop() throws Exception {
+    public T pop() throws Exception { //Retira o elemento no topa da pilha e retorna ele.
         if (!this.isEmpty()) {
             T temp = this.elementos[topoPilha];
             topoPilha--;
@@ -46,8 +46,8 @@ public class Pilha <T> {
             throw new Exception("Underflow - Esvaziamento de Pilha.");
         }
     }
-    //Por enquanto util, sendo usado
-    public T topo() throws Exception {
+
+    public T topo() throws Exception { //Exibe o elemento no topo da pilha.
         if (!this.isEmpty()) {
             return this.elementos[topoPilha];
         }
@@ -55,17 +55,20 @@ public class Pilha <T> {
             throw new Exception("Underflow - Esvaziamento de Pilha.");
         }
     }
-    //Por enquanto util, sendo usado
-    public int quantidade() { //Método para retornar a quantidade de elementos na pilha
+
+    public int quantidade() { //Método para retornar a quantidade de elementos na pilha.
         return topoPilha + 1;
     }
-    //Por enquanto util, sendo usado
-    public int tamanho() { //Método para retornar o tamanho da pilha
+
+    public int tamanho() { //Método para retornar o tamanho da pilha.
         return elementos.length;
     }
-    //teste sendo usado
-    public T percorrer(int i) throws Exception {
+
+    public T percorrer(int i) throws Exception { 
         return elementos[tamanho()-1-i];
+        /*Método para mostrar o elemento na pilha sem causar nenhuma alteração.
+          Feito para ser usado em loops.
+        */
     }
 
 
