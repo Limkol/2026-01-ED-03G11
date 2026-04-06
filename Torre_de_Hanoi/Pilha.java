@@ -1,3 +1,10 @@
+/*
+Integrantes do Grupo:
+Guilherme Longo RA: 10736785
+Gustavo Francisco Toito RA: 10438660
+Helen Santana de Araujo Teixeira RA: 10742524
+ */
+
 /*Representa a torre usada no jogo.
 É uma pilha.*/
 

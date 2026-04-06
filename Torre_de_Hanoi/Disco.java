@@ -1,3 +1,9 @@
+/*
+Integrantes do Grupo:
+Guilherme Longo RA: 10736785
+Gustavo Francisco Toito RA: 10438660
+Helen Santana de Araujo Teixeira RA: 10742524
+ */
 /*Representa os discos que serão usados no jogo.
 Os discos precisam ter um tamanho de valor inteiro.*/
 

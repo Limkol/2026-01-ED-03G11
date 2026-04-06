@@ -1,3 +1,9 @@
+/*
+Integrantes do Grupo:
+Guilherme Longo RA: 10736785
+Gustavo Francisco Toito RA: 10438660
+Helen Santana de Araujo Teixeira RA: 10742524
+ */
 /*Classe principal do código, com o objetivo juntar e 
 controlar todas as outras classes */
 
